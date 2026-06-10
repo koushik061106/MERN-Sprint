@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="margin-left:500px">This is login page</h1>
+    <div class="in">
+        <div class="input">
+            <label>Username</label>
+            <input type="text" placeholder="your name" id="username" style="margin:20px; height:30px;">
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="password" id="password" placeholder="remeber your password" style="margin:20px; height:30px;">
+        </div>
+        <button class="log" onclick="login()">Login</button>
+    </div>
+    <style>
+        .in{
+            place-items:center;
+            padding:20px;
+            gap:5px;
+            border:20px;
+        }
+        .log{
+            margin-top:20px;
+            margin-left:550px; 
+            height:50px;
+            width:100px;
+            background-color:antiquewhite;
+            border-width:0px;
+            border-radius:25px;
+
+        }
+    </style>
+    <script>
+        function login(){
+            let username=document.getElementById("username").value;
+            let password=document.getElementById("password").value;
+            let user=localStorage.getItem("user");
+            let passkey=localStorage.getItem("pass");
+            if (username==user && password===passkey){
+                window.location.href="dashboard.html";
+            }
+            else{
+                alert("username or password is incorrect");
+            }
+        }
+    </script>
+</body>
+</html>

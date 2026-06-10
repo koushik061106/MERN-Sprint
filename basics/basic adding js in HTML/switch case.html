@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="myInput" placeholder="Enter a day of the week">
+    <button onclick="checkDay()">Check Day</button>
+    <p id="para"></p>
+
+    <script>
+        function checkDay() {
+            let day = document.getElementById("myInput").value;
+            let outputPara = document.getElementById("para"); // Select the paragraph element
+
+            switch(day) {
+                case "Monday":
+                    outputPara.textContent = "It's Monday!";
+                    break;
+                case "Tuesday":
+                    outputPara.textContent = "It's Tuesday!";
+                    break;
+                case "Wednesday":
+                    outputPara.textContent = "It's Wednesday!";
+                    break;
+                case "Thursday":
+                    outputPara.textContent = "It's Thursday!";
+                    break;
+                case "Friday":
+                    outputPara.textContent = "It's Friday!";
+                    break;
+                case "Saturday":
+                    outputPara.textContent = "It's Saturday!";
+                    break;
+                case "Sunday":
+                    outputPara.textContent = "It's Sunday!";
+                    break;
+                default:
+                    alert("Please enter a valid day of the week.");
+            }
+        }
+    </script>   
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="w1">
+    <h1>fghjk</h1>
+    <button onclick="myfun()">clickme and create para</button>
+    <input type="text" id="myinput" placeholder="enter something">
+    <script>
+        function myfun(){
+            var w1=document.getElementById("w1");
+            var p1=document.createElement("p");
+            p1.innerText=`this is a new para and you entered ${document.getElementById("myinput").value}`;
+            w1.appendChild(p1);
+        }
+    </script>
+</body>
+</html>
