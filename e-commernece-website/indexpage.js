@@ -16,17 +16,21 @@ function register(){
     }
     else{
         localStorage.setItem("newuser",username);
-        localStorage.setItem('pasword',password1);
+        localStorage.setItem('password',password1);
         alert('signup successfully');
         loginform.style.display='flex';
         signupform.style.display='none';
     }    
 }
-function login(){
+function here(){
+    loginform.style.display='flex';
+    signupform.style.display='none';
+}
+function check(){
         let username=document.getElementById("username").value;
         let password=document.getElementById("password").value;
-        let user=localStorage.getItem("user");
-        let passkey=localStorage.getItem("pass");
+        let user=localStorage.getItem("newuser");
+        let passkey=localStorage.getItem("password");
         if (username==user && password===passkey){
             window.location.href="dashboard.html";
         }

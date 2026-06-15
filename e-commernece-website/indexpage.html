@@ -9,34 +9,34 @@
 <body>
     <main class="main">
         <div class="login both" id="login-form">
+            <h1>Hi Welcome</h1>
+            <p>Please Enter Your Details</p>
             <div class="ins">
-            <label for="username" style="padding-top:20px;">Username:</label>
-            <input type="text" placeholder="your name" id="username">
+            <input type="text" placeholder="Enter Email" id="username">
             </div>
             <div class="ins">
-            <label for="password" style="padding-top:20px;">Password:</label>
-            <input type="password" placeholder="remeber your password" id="password">
+            <input type="password" placeholder="Enter password" id="password">
+            <a style="margin-top:20px; cursor: pointer; text-decoration: underline;" class="forg">Forget password</a>
             </div>
-            <button onclick="check()">Login</button>
-            <a>Forget password</a>
-            <p>register here
-            <button  style="gap:5px; margin-left:5px" id="sign" onclick="showsignup()">Sign-up</button>
-            </p>
+            <button style="margin-top:15px; cursor: pointer;" onclick="check()">Login</button>
+            <div class="bottom">
+            <p>Don't have an account ?</p>
+            <a id="sign" onclick="showsignup()" style="margin-left:5px; color:aliceblue; text-decoration:underline; cursor: pointer;">Sign-up</a>
+            </div>
         </div>
         <div class="Sign-up both" id="Signup-form">
+            <h1>Create Account</h1>
             <div class="ins">
-            <label for="newuser" style="padding-top:12px; padding-left:12px;">New Username:</label>
             <input type="text" placeholder="Enter your new username" id="newuser">
             </div>
             <div class="ins">
-            <label for="newpass" style="padding-top:12px; padding-left:12px;">Password :</label>
-            <input type="password" id="newpass">
+                <input type="text" placeholder="Enter new password" id="newuser">            
             </div> 
             <div class="ins">
-            <label for="newpass1" style="padding-top:12px; padding-left:12px;">Confirm Password :</label>
-            <input type="password" id="newpass1">
+            <input type="password" id="newpass1" placeholder="passwords should be same">
             </div>   
-            <button onclick="register()">confrim</button>
+            <button style="margin-top:10px;" onclick="register()">Confirm</button>
+            <a style="margin-top:15px; cursor: pointer; color:rgb(111, 0, 255); text-decoration:underline;" onclick="here()">Back to login</a>
         </div>
     </main>
     <script src="indexpage.js" defer></script>
