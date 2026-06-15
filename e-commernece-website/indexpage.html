@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-commerence website</title>
+    <link rel="stylesheet" href="indexpage.css">
+</head>
+<body>
+    <main class="main">
+        <div class="login both" id="login-form">
+            <div class="ins">
+            <label for="username" style="padding-top:20px;">Username:</label>
+            <input type="text" placeholder="your name" id="username">
+            </div>
+            <div class="ins">
+            <label for="password" style="padding-top:20px;">Password:</label>
+            <input type="password" placeholder="remeber your password" id="password">
+            </div>
+            <button onclick="check()">Login</button>
+            <a>Forget password</a>
+            <p>register here
+            <button  style="gap:5px; margin-left:5px" id="sign" onclick="showsignup()">Sign-up</button>
+            </p>
+        </div>
+        <div class="Sign-up both" id="Signup-form">
+            <div class="ins">
+            <label for="newuser" style="padding-top:12px; padding-left:12px;">New Username:</label>
+            <input type="text" placeholder="Enter your new username" id="newuser">
+            </div>
+            <div class="ins">
+            <label for="newpass" style="padding-top:12px; padding-left:12px;">Password :</label>
+            <input type="password" id="newpass">
+            </div> 
+            <div class="ins">
+            <label for="newpass1" style="padding-top:12px; padding-left:12px;">Confirm Password :</label>
+            <input type="password" id="newpass1">
+            </div>   
+            <button onclick="register()">confrim</button>
+        </div>
+    </main>
+    <script src="indexpage.js" defer></script>
+</body>
+</html>

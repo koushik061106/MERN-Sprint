@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    body {
+        background-color: aliceblue;
+        height: 100vh;
+        margin: 0;
+        /* This perfectly centers the whole fan container */
+        display: grid;
+        place-items: center; 
+    }
+    /* 1. The Wrapper (This is what spins) */
+    .fan-container {
+        height: 200px;
+        width: 200px;
+        position: relative; /* Acts as the boundary for the absolute elements inside */
+        
+        /* Apply the spin animation here */
+        animation: spinEffect 1s linear infinite;
+    }
+
+    /* 2. The Center Hub */
+    .fan-hub {
+        background-color: antiquewhite;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* z-index: 10; Keeps it on top of the wings */
+    }
+
+    /* 3. The Base Wing Styling */
+    .wing {
+        height: 80px;
+        width: 40px;
+        background-color: black;
+        border-radius: 20px; /* Rounded pill shape */
+        position: absolute;
+        
+        /* Pin all wings exactly to the center */
+        left: 50%;
+        bottom: 50%;
+        margin-left: -20px; /* Pulls it left by exactly half its width to perfectly center it */
+        
+        /* THE MAGIC TRICK: Move the pivot point to the bottom center of the wing */
+        transform-origin: bottom center;
+    }
+
+    /* 4. Fan out the wings (360deg / 3 wings = 120deg apart) */
+    .wing1 { transform: rotate(0deg); }
+    .wing2 { transform: rotate(120deg); }
+    .wing3 { transform: rotate(240deg); }
+
+    /* 5. The Animation */
+    @keyframes spinEffect {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+</style>
+</head>
+<body>
+
+    <div class="fan-container">
+        <div class="wing wing1"></div>
+        <div class="wing wing2"></div>
+        <div class="wing wing3"></div>
+        <div class="fan-hub"></div>
+    </div>
+
+</body>
+</html>
+</body>
+</html>

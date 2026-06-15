@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <div class="index">
+    <div class="container" id="Login">
+            <h2>Login</h2>
+            <label for="username">Username or Email:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>      
+            <p>forget password</p>
+            <button type="submit">Log In</button>
+            <button id="to-signup" onclick="signup()"> Sign up</button>
+    </div>
+    <div class="container" id="signup">
+        <h2>Signup</h2>
+        <label for="username">Username or Email:</label>
+        <input type="text" id="username-1" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password-1" name="password" required>      
+        <p>forget password</p> 
+         <label for="confirm-password" id="confrim password">confrim password</label>
+        <input type="password" id="confirm-password">
+        <button onclick="login()">sign in</button>
+        <button type="submit" id="to-login" onclick="login()">Log In</button>
+    </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
