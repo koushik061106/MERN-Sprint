@@ -42,12 +42,12 @@ a {
 .navs:hover{
     border-bottom: 2px solid black;
     padding: 2px;
-    
 }
 .Logo{
     display: flex;
     flex-direction: column;
     align-items:center;
+    text-align: center;
     padding: 40px;
     justify-content: space-evenly;
     background-color:rgba(253, 221, 226, 0.949);
@@ -66,7 +66,7 @@ a {
     background-image: url("photo-1441984904996-e0b6ba687e04.avif");
     background-size: cover;
     background-position: center; 
-    height: 80vh; 
+    height: 90vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,10 +77,18 @@ a {
     font-size: 25px;
     margin: 0;
 }
+.homy{
+    background-color: rgba(0, 0, 0, 0.295);
+    backdrop-filter: blur;
+    border-radius: 25px;
+    padding: 40px;
+    z-index: 12;
+    box-shadow: rgba(255, 255, 255, 0.401)0 5px 20px;
+}
 .hom:hover{
-    border:snow;
+    border:snow ease;
     border-bottom:2px solid white;
-    padding-bottom:2px;
+    padding-bottom:2px ease;
 }
 .shop-btn {
     padding: 12px 24px;
@@ -105,26 +113,72 @@ a {
     padding: 40px;
     background-color:rgba(253, 221, 226, 0.949);
 }
-.dress-grid ,.clothes-grid,.shoes-grid{
+.dress-grid ,.clothes-grid,.shoes-grid,.cart-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     justify-content: space-evenly;
     gap: 30px; 
 }
 
-.dress-card ,.clothes-card,.shoes-card{
+.dress-card ,.clothes-card,.shoes-card,.cart-card{
     background-color: white;
     border-radius: 12px;
     box-shadow: rgba(196, 190, 190, 0.719) 0 5px 20px;
     overflow: hidden; 
-    cursor: pointer;
     height: max-content;
     width: max-content;
     font-family:'Times New Roman', Times, serif;
 }
 .imgs-dress{
-    height: auto;
+    height: 300px;
     width: 320px;
     object-fit: cover;
     border-bottom: solid rgb(209, 216, 219);
+}
+.cart{
+    background-color: rgba(255, 135, 135, 0.911);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+    box-shadow: rgba(117, 117, 117, 0.356)0 5px 20px;
+    margin-left:20px;
+    margin-bottom: 18px;
+    text-align: center;
+    padding:6px;
+}
+.cart:hover{
+    background-color: rgb(255, 100, 100);
+}
+.cart-page{
+    padding: 25px;
+    background-color:rgba(253, 221, 226, 0.949);
+    display: none;
+}
+.a1{
+    background-color: rgba(255, 135, 135, 0.911);
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: rgba(117, 117, 117, 0.356)0 5px 20px;
+    text-align: center;
+    height:30px;
+    width:30px;
+    margin: 6px;
+}
+.a1:hover{
+    background-color: rgb(255, 100, 100);
+}
+.total{
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    font-weight: bolder;
 }

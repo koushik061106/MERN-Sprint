@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="dashboard.css"/>
 </head>
 <body>
@@ -13,19 +13,21 @@
     </div>
     
     <div style="width:60%;" class="ele">
-        <a class="navs" href="#home-page">Home</a>
-        <a class="navs" href="#dresses-page">Dresses</a>
-        <a class="navs" href="#clothes-page">Clothes</a>
-        <a class="navs" href="#shoes-page">Shoes</a>
+        <a class="navs " href="#home-page" onclick="Navs()">Home</a>
+        <a class="navs " href="#dresses-page" onclick="Navs()">Dresses</a>
+        <a class="navs " href="#clothes-page" onclick="Navs()">Clothes</a>
+        <a class="navs " href="#shoes-page" onclick="Navs()">Shoes</a>
     </div>
-    
+    <div class="navs" onclick="cart()">
+        <a>Cart</a>
+    </div>
     <div style="cursor:pointer;">
-        <a class="navs" style="color: #ffffff;">Logout</a> 
+        <a class="navs" style="color: #ffffff;" onclick="logout()">Logout</a> 
     </div>
     </nav>
     <div class="home-page" id="home-page">
         <div class="home">
-            <div style="text-align:center;">
+            <div class="homy" style="text-align:center;">
                 <h1 class="hom">Welcome   <span id="display-name" style="color: rgb(255, 255, 255);"></span> !</h1>
                 <h2 class="hom">Shopping made easy with us</h2>
                 <p class="hom">We offer more accountability on what you shop on our website</p>
@@ -48,6 +50,7 @@
                         Discount : 56%
                     </span>
                 </h2>
+                <button class="cart" onclick="addtocart(`7-2-dress-transparent.png`,`Silk Route Dress`,`999`)">Add to Cart </button>
             </div>
             <div class="dress-card">
                 <img src="7-2-dress-transparent.png" class="imgs-dress"/>
@@ -61,6 +64,7 @@
                         Discount : 56%
                     </span>
                 </h2>
+                <button class="cart" onclick="addtocart(`7-2-dress-transparent.png`,`Silk Route Dress`,`999`)">Add to Cart </button>
             </div>
             <div class="dress-card">
                 <img src="7-2-dress-transparent.png" class="imgs-dress"/>
@@ -74,6 +78,7 @@
                         Discount : 56%
                     </span>
                 </h2>
+                <button class="cart" onclick="addtocart(`7-2-dress-transparent.png`,`Silk Route Dress`,`999`)">Add to Cart </button>
             </div>
         </div>
         <div class="dress-grid" style="padding-top:40px;">
@@ -89,6 +94,7 @@
                         Discount : 56%
                     </span>
                 </h2>
+                <button class="cart" onclick="addtocart(`7-2-dress-transparent.png`,`Silk Route Dress`,`999`)">Add to Cart </button>
             </div>
             <div class="dress-card">
                 <img src="7-2-dress-transparent.png" class="imgs-dress"/>
@@ -102,6 +108,7 @@
                         Discount : 56%
                     </span>
                 </h2>
+                <button class="cart" onclick="addtocart(`7-2-dress-transparent.png`,`Silk Route Dress`,`999`)">Add to Cart </button>
             </div>
             <div class="dress-card">
                 <img src="7-2-dress-transparent.png" class="imgs-dress"/>
@@ -115,6 +122,7 @@
                         Discount : 56%
                     </span>
                 </h2>
+                <button class="cart" onclick="addtocart(`7-2-dress-transparent.png`,`Silk Route Dress`,`999`)">Add to Cart </button>
             </div>
         </div>
     </div>
@@ -123,42 +131,45 @@
         <div class="clothes-grid">
             <div class="clothes-card">
                 <img src="premium_photo-1664202526047-405824c633e7.avif" class="imgs-dress"/>
-                <h1 style="padding:1px 10px; font-size: large;">Permium Silk Clothes</h1>
+                <h1 style="padding:1px 10px; font-size: large;">Permium clothes</h1>
                 <p style="padding:0px 10px;">from - delights</p>
-                <h2 style="padding:0px 10px; font-size: large;">Price - 399 $ 
+                <h2 style="padding:0px 10px; font-size: large;">Price - 499 $ 
                     <span style="text-decoration:line-through; font-size: medium; color: rgb(102, 107, 111);">
-                    699 $
+                    900 $
                     </span>
                     <span style="padding:0px 10px; color: rgb(255, 82, 82);">
-                        Discount : 55%
+                        Discount : 52%
                     </span>
                 </h2>
+                <button class="cart" onclick="addtocart(`premium_photo-1664202526047-405824c633e7.avif`,`Permium clothes`,`499`)">Add to Cart </button>
+            </div>
+            <div class="clothes-card"> 
+                <img src="premium_photo-1664202526047-405824c633e7.avif" class="imgs-dress"/>
+                <h1 style="padding:1px 10px; font-size: large;">Permium clothes</h1>
+                <p style="padding:0px 10px;">from - delights</p>
+                <h2 style="padding:0px 10px; font-size: large;">Price - 499 $ 
+                    <span style="text-decoration:line-through; font-size: medium; color: rgb(102, 107, 111);">
+                    900 $
+                    </span>
+                    <span style="padding:0px 10px; color: rgb(255, 82, 82);">
+                        Discount : 52%
+                    </span>
+                </h2>
+                <button class="cart" onclick="addtocart(`premium_photo-1664202526047-405824c633e7.avif`,`Permium clothes`,`499`)">Add to Cart </button>
             </div>
             <div class="clothes-card">
                 <img src="premium_photo-1664202526047-405824c633e7.avif" class="imgs-dress"/>
-                <h1 style="padding:1px 10px; font-size: large;">Permium Silk Clothes</h1>
+                <h1 style="padding:1px 10px; font-size: large;">Permium clothes</h1>
                 <p style="padding:0px 10px;">from - delights</p>
-                <h2 style="padding:0px 10px; font-size: large;">Price - 399 $ 
+                <h2 style="padding:0px 10px; font-size: large;">Price - 499 $ 
                     <span style="text-decoration:line-through; font-size: medium; color: rgb(102, 107, 111);">
-                    699 $
+                    900 $
                     </span>
                     <span style="padding:0px 10px; color: rgb(255, 82, 82);">
-                        Discount : 55%
+                        Discount : 52%
                     </span>
                 </h2>
-            </div>
-            <div class="clothes-card">
-                <img src="premium_photo-1664202526047-405824c633e7.avif" class="imgs-dress"/>
-                <h1 style="padding:1px 10px; font-size: large;">Permium Silk Clothes</h1>
-                <p style="padding:0px 10px;">from - delights</p>
-                <h2 style="padding:0px 10px; font-size: large;">Price - 399 $ 
-                    <span style="text-decoration:line-through; font-size: medium; color: rgb(102, 107, 111);">
-                    699 $
-                    </span>
-                    <span style="padding:0px 10px; color: rgb(255, 82, 82);">
-                        Discount : 55%
-                    </span>
-                </h2>
+                <button class="cart" onclick="addtocart(`premium_photo-1664202526047-405824c633e7.avif`,`Permium clothes`,`499`)">Add to Cart </button>
             </div>
         </div>
     </div>
@@ -166,7 +177,7 @@
         <h1 style="text-align: center; padding-bottom:10px;">Not wear Decorate Your Feet <span>valuable !</span></h1>
         <div class="shoes-grid">
             <div class="shoes-card">
-                <img src="photo-1542291026-7eec264c27ff.avif    " class="imgs-dress"/>
+                <img src="photo-1542291026-7eec264c27ff.avif" class="imgs-dress"/>
                 <h1 style="padding:1px 10px; font-size: large;">Air Jordan Red's</h1>
                 <p style="padding:0px 10px;">from - Nike</p>
                 <h2 style="padding:0px 10px; font-size: large;">Price - 987 $ 
@@ -177,6 +188,7 @@
                         Discount : 43%
                     </span>
                 </h2>
+                <button class="cart" onclick="addtocart(`photo-1542291026-7eec264c27ff.avif`,`Air Jordan Reds`,`987`)">Add to Cart </button>
             </div>
             <div class="shoes-card">
                 <img src="photo-1542291026-7eec264c27ff.avif    " class="imgs-dress"/>
@@ -190,6 +202,7 @@
                         Discount : 43%
                     </span>
                 </h2>
+                <button class="cart" onclick="addtocart(`photo-1542291026-7eec264c27ff.avif`,`Air Jordan Reds`,`987`)">Add to Cart </button>
             </div>
             <div class="shoes-card">
                 <img src="photo-1542291026-7eec264c27ff.avif    " class="imgs-dress"/>
@@ -203,6 +216,7 @@
                         Discount : 43%
                     </span>
                 </h2>
+                <button class="cart" onclick="addtocart(`photo-1542291026-7eec264c27ff.avif`,`Air Jordan Reds`,`987`)">Add to Cart </button>
             </div>
         </div>
     </div>
@@ -215,6 +229,17 @@
         Address: 8-75-12/A05u hbf hbs svs<br>
         Thank you for visiting us
     </p>
+    </div>
+    <div class="cart-page" id="Cart-page">
+        <h1 style="text-align: center;">Your Cart Buy Now from Here</h1>
+        <div class="cart-grid" id="cart-gri">
+        </div>
+        <div class="total" id="tot">
+            <div style="display: flex; flex-direction: row; justify-content: center; margin-top:20px;"> 
+            Total Amount : $ 
+            <span id="amt"> </span>
+            </div>
+        </div>
     </div>
     <script src="dashboard.js" defer></script>
 </body>
