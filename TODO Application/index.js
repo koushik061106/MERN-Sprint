@@ -17,12 +17,13 @@ function adding() {
         </div>
         <div class="edy">
                 <button id="edit" class="edi" onclick="edit(this)">!</button>
-                <button id="del" class="edi" onclick="del(this)">X</button>
+                <button id="del" class="edi1" onclick="del(this)" >X</button>
         </div>
     `;
     ;
     con.appendChild(task);
     adgt.value = "";
+    saving();
 };
 function edit(para) {
     let card = para.parentElement.parentElement;
@@ -31,6 +32,7 @@ function edit(para) {
     if (newText !== null && newText !== "") {
         pTag.innerText = newText;
     }
+    saving();
 }
 function mov(task){
     let ta=task.parentElement.parentElement;
@@ -43,8 +45,20 @@ function mov(task){
         ta.querySelector('p').style.textDecoration="none";
         ta.querySelector('p').style.color="black";
     }
+    saving();
 };
 function del(tas){
     let tase=tas.parentElement.parentElement;
     tase.remove();
 }
+function saving(){
+    localStorage.setItem("savingcon", con.innerHTML);
+    localStorage.setItem("savedCompl", compl.innerHTML);
+}
+function load() {
+    let pending = localStorage.getItem("savingcon");
+    let completed = localStorage.getItem("savedCompl");
+    con.innerHTML = pending;
+    compl.innerHTML = completed;
+}
+load();

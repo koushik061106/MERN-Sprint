@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onkeydown</title>
+</head>
+<body>
+    <!-- <div>
+        <h1 style="text-align:center;">Using onkeydown</h1>
+        <input type="text" id="val" onkeydown="check()">
+    </div>
+    <div id="appear">
+
+    </div>
+    <script>
+        let val=document.getElementById("val");
+        let here=document.getElementById("appear");
+        function check(){
+            console.log(val.value);
+            here.textContent=val.value;
+
+        }
+    </script> -->
+    <!-- <style>
+        /* .hid{
+            display: none;
+        } */
+    </style>
+    <div>
+    <button onclick="display()"> display </button>
+    </div>
+    <div id="show" class="hid"> 
+         <!-- <h1>appeared </h1>
+         <p> press again to hide </p> -->
+    <!-- </div>
+    <script>
+        function display(){
+             let d1=document.getElementById("show");
+            // d1.style.display="revert";
+            let 
+            d1.innerHTML="<H1>HELLO</H1>";
+
+        }
+
+    </script> --> 
+    <style>
+        .dd{
+            background-color: black;
+            color: white;
+        }
+        .mainl{
+            background-color:snow;
+            color: black;
+        }
+    </style>
+    <div id="main">
+        <h1 style="text-align: center;">Hello</h1>
+        <div style="text-align: center;">
+        <button onclick="dark()"> Drak Mode</button>
+        <button onclick="light()"> Light Mode</button>
+        </div>
+    </div>
+    <script>
+        let m1=document.getElementById("main");
+        function dark(){
+            m1.classList.add("dd");
+        }
+        function light(){
+            m1.classList.remove("dd");
+        }
+    </script>
+</body>
+</html>

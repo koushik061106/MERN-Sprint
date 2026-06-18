@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer</title>
+</head>  
+    <style>
+        .sts{
+            height:50px;
+            width:100px;
+            border: none;
+            border-radius: 10px;
+            background-color: antiquewhite;
+            color: black;
+            padding: 3px;
+            text-align: center;
+            font-size: larger;
+        }
+        .tim{
+            margin:30px;
+            font-size: 50px;
+        }
+    </style>    
+<body>
+    <div style="text-align: center;">
+        <button class="sts" onclick="setInterval(timer(),1000)">Start</button>
+        <div id="man" class="tim">06:00:00</div>
+    </div>       
+</body>
+    <script>
+        let time=document.getElementById("man");
+        let totalSeconds=21600; 
+        function timer(){
+            totalSeconds=totalSeconds-1;
+            let hours =parseInt(totalSeconds / 3600);
+            let minute = parseInt((totalSeconds %3600)/60);
+            let seconds =   totalSeconds%60;
+            man.innerText = 
+            `${hours}:${minute}:${seconds}`;
+        }
+    </script>
+</html>
