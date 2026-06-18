@@ -24,20 +24,29 @@
     </style>    
 <body>
     <div style="text-align: center;">
-        <button class="sts" onclick="setInterval(timer(),1000)">Start</button>
+        <button class="sts" onclick="timer()">Start</button>
+        <button class="sts" onclick="stop()">Stop</button>
         <div id="man" class="tim">06:00:00</div>
     </div>       
 </body>
     <script>
         let time=document.getElementById("man");
         let totalSeconds=21600; 
+        let value;
+        
         function timer(){
-            totalSeconds=totalSeconds-1;
-            let hours =parseInt(totalSeconds / 3600);
-            let minute = parseInt((totalSeconds %3600)/60);
-            let seconds =   totalSeconds%60;
-            man.innerText = 
-            `${hours}:${minute}:${seconds}`;
+            value=setInterval(function(){
+                totalSeconds--;
+                let hours =parseInt(totalSeconds / 3600);
+                let minute = parseInt((totalSeconds %3600)/60);
+                let seconds = totalSeconds%60;
+                man.innerText = 
+                `${hours}:${minute}:${seconds}`;
+            },1000)
+        }
+        function stop(){
+           
+            clearInterval(value);
         }
     </script>
 </html>
