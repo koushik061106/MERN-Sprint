@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="circle" id="clock"> </div>
+</body>
+<script>
+    function displaytime(){
+        let hours=new Date().getHours();
+        let minutes=new Date().getMinutes();
+        let secs=new Date().getSeconds();
+        if (secs<10){
+            secs='0'+secs;
+        }
+        if (hours<10){
+            hours='0'+hours;
+        }
+        if (minutes<10){
+            minutes='0'+minutes;
+        }
+        document.getElementById("clock").textContent=hours + ' : ' + minutes + ' : ' + secs;
+    }
+    setInterval(()=>{
+        displaytime()
+    },[1000])
+</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css"/></head>
+<body>
+    <div>
+        <div class="circle" id="clock">
+            <div class="h hh" id="hourHand"></div>
+            <div class="h mh" id="minHand"></div>
+            <div class="h sh" id="secHand"></div>
+            <div class="dot" ></div>
+            <div class="numbers number1">1</div>
+            <div class="numbers number2">2</div>
+            <div class="numbers number3">3</div>
+            <div class="numbers number4">4</div>
+            <div class="numbers number5">5</div>
+            <div class="numbers number6">6</div>
+            <div class="numbers number7">7</div>
+            <div class="numbers number8">8</div>
+            <div class="numbers number9">9</div>
+            <div class="numbers number10">10</div>
+            <div class="numbers number11">11</div>
+            <div class="numbers number12">12</div>
+        </div>
+    </div>
+</body>
+<script>
+ function displaytime() {
+            let now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let secs = now.getSeconds();
+            
+            let displayHours = hours < 10 ? '0' + hours : hours;
+            let displayMins = minutes < 10 ? '0' + minutes : minutes;
+            let displaySecs = secs < 10 ? '0' + secs : secs;
+            document.getElementById("secHand").style.rotate=`${secs*6}deg`;
+            // document.getElementById("minHand").style.rotate=`${((minutes*60+secs)/10)}deg`;
+            document.getElementById("minHand").style.rotate=`${((minutes*6))}deg`;
+            document.getElementById("hourHand").style.rotate=`${((hours*60+minutes)/2)}deg`;
+        }
+        setInterval(displaytime, 1000);
+        
+
+</script>
+</html>
