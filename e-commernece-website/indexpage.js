@@ -12,7 +12,7 @@ function register(){
         alert('please fill details');
         return;
     }else if (password!==password1){
-        alert('please check pass words again');
+        alert('please check passwords again');
     }
     else{
         localStorage.setItem("newuser",username);
